@@ -5,26 +5,12 @@
 .basket {
   position: absolute;
   width: 384px;
-  min-height: 499px;
-  top: 82px;
+  top: 163px;
   right: 0;
   background-color: $color-background;
 
-  @include media-big {
-    width: 100%;
-  }
-
-  @include media-1920 {
-    right: -10%;
-    padding-right: 10%;
-  }
-
-  @include media-1440 {
-    width: 384px;
-  }
-
-  @include media-1024 {
-    right: -35%;
+  @include media-991 {
+    top: 64px;
   }
 }
 
@@ -60,4 +46,12 @@
 
 .card__block_counter {
   width: 50px;
+}
+
+.sum__text {
+   margin-bottom:20px;
+}
+
+.sum__btn {
+margin-bottom: 20px;
 }

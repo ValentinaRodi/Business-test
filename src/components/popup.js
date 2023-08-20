@@ -10,10 +10,23 @@ function closeModal(selector) {
 
 // Popup basket open close
 const popupBasketActiveBtn = document.querySelector(".popup-backet-btn");
+const popupBasketActiveBtnMob = document.querySelector(".popup-backet-btn-mob");
 
 let displayBasket = true;
 
 popupBasketActiveBtn.addEventListener("click", () => {
+  if (displayBasket === true) {
+    displayBasket = false;
+    openModal(".basket");
+    popupBasketActiveBtn.classList.add("btn-icon-color");
+  } else {
+    closeModal(".basket");
+    popupBasketActiveBtn.classList.remove("btn-icon-color");
+    displayBasket = true;
+  }
+});
+
+popupBasketActiveBtnMob.addEventListener("click", () => {
   if (displayBasket === true) {
     displayBasket = false;
     openModal(".basket");
@@ -124,112 +137,3 @@ btnForm.addEventListener("click", (event) => {
     displayForm = true;
   }
 });
-
-// Counter
-const basketItems = document.querySelectorAll(".basket-count");
-const basketSum = document.querySelector(".sum-all");
-const quantitySumItem = document.querySelectorAll(".card-sum");
-const basketCounterIcon = document.querySelector(".basket-counter-icon");
-const quantityAll = document.querySelectorAll(".quantity");
-
-let sum = [];
-let numberQuantity = [];
-
-basketItems.forEach((basketItem) => {
-  const decrementButton = basketItem.querySelector(".decrement");
-  const incrementButton = basketItem.querySelector(".increment");
-  const quantityInput = basketItem.querySelector(".quantity");
-  const quantitySum = basketItem.querySelector(".card-sum");
-
-  let sumItem = quantitySum.innerHTML;
-
-  decrementButton.addEventListener("click", () => {
-    let currentQuantity = parseInt(quantityInput.value);
-    sum = [];
-    numberQuantity = [];
-    if (currentQuantity > 0) {
-      currentQuantity--;
-    }
-
-    quantityInput.value = currentQuantity;
-    quantitySum.innerHTML = parseInt(sumItem) * parseInt(currentQuantity);
-
-    quantitySumItem.forEach((item) => {
-      sum.push(parseInt(item.innerHTML));
-    });
-
-    basketSum.innerHTML = sum.reduce((partialSum, a) => partialSum + a, 0);
-
-    quantityAll.forEach((item) => {
-      numberQuantity.push(parseInt(item.value));
-    });
-
-    basketCounterIcon.innerHTML = numberQuantity.reduce(
-      (partialSum, a) => partialSum + a,
-      0
-    );
-  });
-
-  incrementButton.addEventListener("click", () => {
-    let currentQuantity = parseInt(quantityInput.value);
-    sum = [];
-    numberQuantity = [];
-    currentQuantity++;
-
-    quantityInput.value = currentQuantity;
-    quantitySum.innerHTML = parseInt(sumItem) * parseInt(currentQuantity);
-
-    quantitySumItem.forEach((item) => {
-      sum.push(parseInt(item.innerHTML));
-    });
-
-    basketSum.innerHTML = sum.reduce((partialSum, a) => partialSum + a, 0);
-
-    quantityAll.forEach((item) => {
-      numberQuantity.push(parseInt(item.value));
-    });
-
-    basketCounterIcon.innerHTML = numberQuantity.reduce(
-      (partialSum, a) => partialSum + a,
-      0
-    );
-  });
-});
-
-//Add in basket item
-const basket = document.querySelector(".basket");
-const card = document.querySelectorAll(".card");
-
-let basketCards = [];
-
-card.forEach((item) => {
-  basketCards.push(item);
-});
-
-function addToCart(e) {
-  basketCards.forEach((item) => {
-    if (e.target.id === item.id) {
-      basketCards.push(item);
-    }
-  });
-}
-
-let buttonsAdd = document.querySelectorAll(".add-to-cart");
-for (let i = 0; i < buttonsAdd.length; i++) {
-  buttonsAdd[i].addEventListener("click", addToCart);
-}
-
-//Remove in basket item
-
-function removeToCart(e) {
-  for (let i = 0; i < basketCards.length; i++) {
-    if (e.target.id === item.id) {
-      basketCards.splice(i, 1);
-    }
-  }
-}
-
-let buttonsDel = document.querySelectorAll(".add-to-cart");
-for (let i = 0; i < buttonsDel.length; i++) {
-  buttonsDel[i].addEventListener("click", removeToCart);
-}
