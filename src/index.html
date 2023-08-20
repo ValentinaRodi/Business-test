@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Test</title>
+  </head>
+  <body>
+    <header class="header border-bottom">
+      <div class="wrapper header__block layout-row">
+        <div class="header__info header__info-small layout-row">
+          <a href="#">
+            <picture>
+              <source
+                media="(max-width: 991px)"
+                srcset="/src/icons/Logo-mobile.svg"
+              />
+              <img src="icons/Logo.svg" alt="logo" />
+            </picture>
+          </a>
+          <p class="text-display">
+            Интернет-магазин дверей <br />в Нижнем Новгороде
+          </p>
+        </div>
+        <div
+          class="border-left header__block-height header__info-big text-field__icon header__info-small layout-row-start"
+        >
+          <span class="text-field__aicon">
+            <img src="icons/Search.svg" alt="search" />
+          </span>
+          <input class="text-field__input" type="text" placeholder="Поиск" />
+        </div>
+        <div
+          class="border-left header__block-height header__info-big text-field__icon layout-row-start"
+        >
+          <span class="text-field__aicon">
+            <img src="icons/Location.svg" alt="location" />
+          </span>
+          <input
+            class="text-field__input"
+            type="text"
+            value="Нижний Новгород, ул. Уличная, 1, оф. 15"
+          />
+        </div>
+        <div
+          class="layout-row layout-row-wrap header__info-mob header__info header__block-height border-left"
+        >
+          <a href="#" class="header__link"
+            ><img src="icons/WahatsApp.svg" alt="whatsApp"
+          /></a>
+          <a href="#" class="header__link"
+            ><img src="icons/Telegram.svg" alt="telegram"
+          /></a>
+          <p class="header__tel">8(831)219-97-81</p>
+          <button class="btn btn-text btn-display popup-form-btn">
+            Заказать звонок
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="menu border-bottom">
+      <div class="wrapper menu__block layout-row menu__display">
+        <div
+          class="menu__block-small menu__catalog-small layout-row-normal-gap"
+        >
+          <div class="menu__catalog-widht layout-row-gap">
+            <button class="btn"><img src="icons/Menu.svg" alt="menu" /></button>
+            <p class="menu__text">Каталог</p>
+          </div>
+          <p class="text-display">Более 3000 товаров</p>
+        </div>
+        <nav class="layout-row-gap border-left menu__nav">
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Доставка и установка</a></li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">Сертификаты</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+        </nav>
+        <div
+          class="layout-row-gap-big menu__block-small border-left link-block"
+        >
+          <div class="layout-row menu__block-counter">
+            <button class="btn btn-icon">
+              <img src="icons/Icon.svg" alt="icon" />
+            </button>
+            <span class="menu__counter layout-row">3</span>
+          </div>
+          <button class="btn"><img src="icons/Frame.svg" alt="heart" /></button>
+          <div class="layout-row menu__block-counter">
+            <button class="btn btn-icon popup-backet-btn">
+              <img src="icons/Basket.svg" alt="basket" />
+            </button>
+            <span
+              class="menu__counter layout-row basket-counter basket-counter-icon"
+              >14</span
+            >
+          </div>
+          <button class="btn"><img src="icons/User.svg" alt="user" /></button>
+          <div class="basket display-none">
+            <div class="border-bottom basket-count card">
+              <div class="basket__card layout-row-between">
+                <img src="images/Item1.png" alt="door" />
+                <div class="card__info">
+                  <p class="card__title">
+                    Браво-22 Snow Melinga / <br />Magic Fog
+                  </p>
+                  <p class="card__text">Межкомнатная дверь</p>
+                </div>
+                <div>
+                  <p class="card__title card-sum">300600</p>
+                  <div class="layout-row-between card__block_counter">
+                    <button class="btn layout-row decrement">
+                      <img src="icons/Minus.svg" alt="minus" />
+                    </button>
+                    <input type="text" class="quantity" value="1" />
+                    <button class="btn layout-row increment">
+                      <img src="icons/Plus.svg" alt="plus" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom basket-count card">
+              <div class="basket__card layout-row-between">
+                <img src="images/Item2.png" alt="door" />
+                <div class="card__info">
+                  <p class="card__title">Браво-22 Snow Melinga</p>
+                  <p class="card__text">Межкомнатная дверь</p>
+                </div>
+                <div>
+                  <p class="card__title card-sum">18600</p>
+                  <div class="layout-row-between card__block_counter">
+                    <button class="btn layout-row decrement">
+                      <img src="icons/Minus.svg" alt="minus" />
+                    </button>
+                    <input type="text" class="quantity" value="1" />
+                    <button class="btn layout-row increment">
+                      <img src="icons/Plus.svg" alt="plus" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom basket-count card">
+              <div class="basket__card layout-row-between">
+                <img src="images/Item2.png" alt="door" />
+                <div class="card__info">
+                  <p class="card__title">Браво-22 Snow Melinga</p>
+                  <p class="card__text">Межкомнатная дверь</p>
+                </div>
+                <div>
+                  <p class="card__title card-sum">18600</p>
+                  <div class="layout-row-between card__block_counter">
+                    <button class="btn layout-row decrement">
+                      <img src="icons/Minus.svg" alt="minus" />
+                    </button>
+                    <input type="text" class="quantity" value="1" />
+                    <button class="btn layout-row increment">
+                      <img src="icons/Plus.svg" alt="plus" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom basket-count card">
+              <div class="basket__card layout-row-between">
+                <img src="images/Item1.png" alt="door" />
+                <div class="card__info">
+                  <p class="card__title">
+                    Браво-22 Snow Melinga / <br />Magic Fog
+                  </p>
+                  <p class="card__text">Межкомнатная дверь</p>
+                </div>
+                <div>
+                  <p class="card__title card-sum">300600</p>
+                  <div class="layout-row-between card__block_counter">
+                    <button class="btn layout-row decrement">
+                      <img src="icons/Minus.svg" alt="minus" />
+                    </button>
+                    <input type="text" class="quantity" value="1" />
+                    <button class="btn layout-row increment">
+                      <img src="icons/Plus.svg" alt="plus" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__card">
+              <p>Сумма заказа: <span class="sum-all">33119</span> ₽</p>
+              <button class="btn btn-color">Перейти к оформлению →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="height: 80vh"></section>
+    <section class="menu menu_mob">
+      <div class="menu__display-mob layout-row-around">
+        <button class="btn layout-column btn-icon">
+          <img src="icons/Catalog-mob.svg" alt="catalog" />Каталог
+        </button>
+        <button class="btn layout-column btn-icon">
+          <img src="icons/Search.svg" alt="search" />Поиск
+        </button>
+        <button class="btn layout-column btn-icon">
+          <img src="icons/Basket.svg" alt="basket" />Корзина
+        </button>
+        <button class="btn layout-column btn-icon">
+          <img src="icons/Stocks.svg" alt="stocks" />Акции
+        </button>
+        <button class="btn layout-column btn-icon popup-menu-mob-btn">
+          <img src="icons/Menu-mob.svg" alt="menu" />Меню
+        </button>
+      </div>
+      <div class="popup-menu-mob menu-display-none">
+        <div class="popup-menu layout-column">
+          <div class="popup-menu__locat text-field__icon">
+            <span class="text-field__aicon">
+              <img src="icons/Location.svg" alt="location" />
+            </span>
+            <input
+              class="text-field__input"
+              type="text"
+              value="Нижний Новгород, ул. Уличная, 1, оф. 15"
+            />
+          </div>
+          <nav class="border-top menu__nav-mob layout-column-gap">
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Доставка и установка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Сертификаты</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+          </nav>
+          <button class="btn btn-light popup-form-btn-mob">
+            Заказать звонок
+          </button>
+          <div class="layout-row popup__menu_icon">
+            <div class="popup__icon">
+              <div>
+                <img src="icons/Icon.svg" />
+              </div>
+            </div>
+            <div class="popup__icon">
+              <img src="icons/Frame.svg" />
+            </div>
+            <div class="popup__icon">
+              <img src="icons/User.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <form class="popup form display-none">
+      <button class="btn btn-close">
+        <img src="icons/del.svg" alt="delete" />
+      </button>
+      <div class="popup__block layout-column">
+        <p class="popup__text">
+          Заполните данные и мы свяжемся с вами в рабочее время и ответим на все
+          интересующие вопросы
+        </p>
+        <input
+          class="popup__input"
+          type="text"
+          placeholder="Имя*"
+          value=""
+          id="name"
+        />
+        <input
+          class="popup__input popup__input-margin"
+          type="tel"
+          placeholder="Телефон*"
+          id="tel"
+          value=""
+        />
+        <div class="check__block">
+          <div class="popup__check layout-row-gap check-border">
+            <input type="checkbox" value="none" id="check" name="check" />
+            <label class="popup__input_check" for="check"></label>
+            <span class="check__span"
+              >Даю свое согласие на обработку персональных данных</span
+            >
+          </div>
+        </div>
+        <button class="btn btn-color btn-form" type="submit">
+          Заказать звонок
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

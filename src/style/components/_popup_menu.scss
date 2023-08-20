@@ -1,0 +1,47 @@
+.popup-menu {
+  display: none;
+
+  @include media-991 {
+    display: flex;
+    position: absolute;
+  bottom: 64px;
+  left: 0;
+  width: 100%;
+  background-color: $color-background;
+  }
+  
+}
+
+.popup-menu__locat {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31%;
+
+  @include media-1024 {
+    width: 100%;
+  }
+
+  @include media-425 {
+    width: 80%;
+  }
+}
+
+.popup__menu_icon {
+  width: 100%;
+}
+
+.popup__icon {
+  width: 36%;
+  height: 60px;
+  border: 1px solid #e4e4e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu-display-none {
+  display: none;
+}

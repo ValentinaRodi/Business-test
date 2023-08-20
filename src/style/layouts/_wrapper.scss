@@ -1,0 +1,40 @@
+.wrapper {
+  max-width: $content-width;
+  margin: auto;
+
+  @include media-big {
+    max-width: $big-width;
+  }
+
+  @include media-1920 {
+    max-width: $content-width;
+  }
+
+  @include media-1440 {
+    max-width: $width-1440;
+    padding-right: 3.8%;
+  }
+
+  @include media-1024 {
+    max-width: $width-1024;
+    padding-right: 2%;
+  }
+
+  @include media-991 {
+    max-width: $width-991;
+    padding-right: 2%;
+  }
+
+  @include media-425 {
+    max-width: $width-425;
+  }
+
+  @include media-mobile {
+    max-width: $mobile-width;
+    padding-right: 0%;
+  }
+
+  @include media-320 {
+    max-width: $width-320;
+  }
+}

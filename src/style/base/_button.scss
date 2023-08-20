@@ -1,0 +1,56 @@
+.btn {
+  font-family: "Roboto", sans-serif;
+  @include font($size: 1.5rem, $weight: 500);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-text {
+    color: $color-primary;
+    &:hover {
+      color: $color-add;
+    }
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+
+  @include media-991 {
+    @include font($size: 1.2rem, $height: 1.5rem, $weight: 500);
+    color: $color-text-add;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.btn-icon-color {
+  background-color: $color-background-add;
+}
+
+.btn-color {
+  background-color: $color-primary;
+  width: 100%;
+  height: 46px;
+  color: $color-background;
+    &:hover {
+      background-color: $color-add;
+    }
+}
+
+.btn-light {
+  border: 1px solid $color-primary;
+  @include font($size: 1.5rem, $height: 4.0rem, $weight: 500);
+  width: 160px;
+  margin-bottom: 36px;
+}
+
+.btn-display {
+  @include media-991 {
+    display: none;
+  }
+}

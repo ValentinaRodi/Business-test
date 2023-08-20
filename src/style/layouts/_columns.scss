@@ -1,0 +1,53 @@
+.layout-column {
+  @include columns($flex-direction: column);
+}
+
+.layout-column-gap {
+  @include columns($flex-direction: column, $gap: 15%);
+}
+.layout-row {
+  @include columns($flex-direction: row);
+
+  @include media-991 {
+    @include columns($flex-direction: row, $justify-content: space-evenly);
+  }
+}
+
+.layout-row-wrap {
+    @include columns($flex-direction: row);
+
+    @include media-1440 {
+      @include columns($flex-direction: row, $wrap: wrap);
+    }
+  }
+
+.layout-row-between {
+  @include columns($flex-direction: row, $justify-content: space-between);
+}
+
+.layout-row-around {
+    @include columns($flex-direction: row, $justify-content: space-around);
+}
+
+.layout-row-start {
+  @include columns($flex-direction: row, $justify-content: flex-start);
+}
+
+.layout-row-gap {
+  @include columns($flex-direction: row, $gap: 5%);
+
+  @include media-1440 {
+    @include columns($flex-direction: row, $gap: 3%);
+  }
+}
+
+.layout-row-gap-big {
+  @include columns($flex-direction: row, $gap: 10%);
+  @include media-1024 {
+    @include columns($flex-direction: row, $gap: 7%);
+  }
+}
+
+.layout-row-normal-gap {
+  @include columns($flex-direction: row, $justify-content: normal, $gap: 5%);
+}
